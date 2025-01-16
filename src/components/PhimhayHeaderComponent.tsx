@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const PhimhayHeaderComponent = () => {
   return (
-    <header className="bg-white bg-opacity-5 flex items-center justify-between p-4">
+    <div className="bg-white bg-opacity-5 flex items-center justify-between p-4">
       <div>
         <Image
           src="https://www.rophim.net/images/logo.svg"
@@ -19,7 +19,7 @@ const PhimhayHeaderComponent = () => {
           className="bg-gray-200 p-2 rounded-lg"
         />
       </div>
-    </header>
+    </div>
   );
 };
 

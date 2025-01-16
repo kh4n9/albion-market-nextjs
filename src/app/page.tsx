@@ -1,47 +1,22 @@
-"use client";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const router = useRouter();
-
-  const handleXemNgay = () => {
-    router.push("/phimhay");
-  };
-
   return (
-    <>
-      <div
-        className="min-h-screen flex items-center justify-center"
-        style={{
-          background:
-            "url('https://www.rophim.net/images/home-background.jpg') no-repeat left center/cover, linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))",
-        }}
-      >
-        <div className="p-20 rounded-3xl shadow-lg w-2/3 space-y-12 backdrop-blur-lg">
-          <div className="flex items-center justify-center text-4xl font-bold text-white">
-            <Image
-              src="https://www.rophim.net/images/logo.svg"
-              alt="Vercel Logo"
-              width={200}
-              height={64}
-            />
-          </div>
-          <div className="flex items-center justify-center text-2xl font-bold text-white">
-            <span className="text-3xl font-bold text-white text-center">
-              Xem Phim Miễn Phí Cực Nhanh, Chất Lượng Cao Và Cập Nhật Liên Tục
-            </span>
-          </div>
-          <div className="flex items-center justify-center text-2xl font-bold text-white">
-            <button
-              onClick={handleXemNgay}
-              className=" bg-gradient-to-r from-orange-300 to-orange-200 hover:drop-shadow-2xl text-white font-bold rounded-full px-6 py-3 text-xl"
-            >
-              Xem Ngay 🍿
-            </button>
-          </div>
-        </div>
+    <div className="flex-col flex items-center justify-center w-screen text-gray-300">
+      <div className="backdrop-blur-lg bg-opacity-5 p-8 rounded-lg shadow-lg items-center justify-center flex flex-col space-y-8">
+        <Image
+          src="https://www.rophim.net/images/logo.svg"
+          alt="Vercel Logo"
+          width={200}
+          height={64}
+        />
+        <h1 className="text-3xl font-bold max-w-2xl text-center">
+          Xem Phim Miễn Phí Cực Nhanh, Chất Lượng Cao Và Cập Nhật Liên Tục
+        </h1>
+        <button className="bg-gradient-to-r from-yellow-200 to-yellow-100 text-gray-700 px-4 py-2 rounded-full text-2xl font-bold hover:shadow-lg hover:px-6 hover:py-3 hover:text-3xl hover:shadow-yellow-100 transition-all duration-500">
+          Xem Phim 🍿
+        </button>
       </div>
-    </>
+    </div>
   );
 }
