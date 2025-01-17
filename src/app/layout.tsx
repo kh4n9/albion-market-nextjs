@@ -1,29 +1,16 @@
-"use client";
-
 import "@/app/globals.css";
-import MainFooterComponent from "@/components/MainFooterComponent";
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html
-      lang="en"
-      className="h-screen flex flex-col"
-      style={{
-        backgroundImage:
-          "url('https://www.rophim.net/images/home-background.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-      }}
-    >
-      <body className="bg-white bg-opacity-5 flex flex-1 overflow-auto">
-        {children}
-      </body>
-      <MainFooterComponent />
+    <html lang="vi">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Albion Market App</title>
+      </head>
+      <body>{children}</body>
     </html>
   );
-}
+};
+
+export default RootLayout;
